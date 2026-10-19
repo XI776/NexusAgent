@@ -1,0 +1,33 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Frontend
+node_modules/
+dist/
+
+# Runtime data
+backend/data/chroma/
+backend/data/eval/baseline.json
+backend/logs/
+*.sqlite3
+*.log
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
