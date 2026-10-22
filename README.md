@@ -48,6 +48,8 @@ docker compose up --build -d
 | 健康检查 | <http://localhost:8000/health> |
 | Prometheus 指标 | <http://localhost:8000/metrics> |
 
+如果 `5174` 已被占用，在 `.env` 中添加 `FRONTEND_PORT=5175`，运行 `docker compose up -d frontend`，然后访问 <http://localhost:5175>。前端连接设置中的后端地址应为 `/api/python`。
+
 `.env.example` 使用本地演示配置。对外部署时，应设置 `NEXUSAGENT_ENV=production`、随机的 `NEXUSAGENT_API_TOKENS` 和独立 Redis 密码，并通过反向代理提供 HTTPS。模型 API Key 只保存在服务端 `.env`，不要放进前端变量。
 
 ## 试用路径
